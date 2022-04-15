@@ -25,6 +25,7 @@ public class Car {
         this.color = color;
         this.miles = miles;
     }
+    
 
 
     public String toString() {
