@@ -63,6 +63,11 @@ public class Animal {
 
     public final void drink() {
         System.out.println(name + " is drinking water");
+
+    }
+
+    public void bark(){
+        System.out.println(getName() + " is barking");
     }
 
 
