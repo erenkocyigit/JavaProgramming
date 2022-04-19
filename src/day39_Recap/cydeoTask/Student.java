@@ -1,6 +1,5 @@
-package day39_Recap;
+package day39_Recap.cydeoTask;
 
-import day39_Recap.cydeoTask.Person;
 
 public class Student extends Person {
 
