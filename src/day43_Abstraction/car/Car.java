@@ -1,8 +1,8 @@
 package day43_Abstraction.car;
 
-public class Car {
+public abstract class Car {
 
-    private final String brand,model;
+    private final String brand, model;
     private String color;
     private final int year;
     private double price;
@@ -11,7 +11,7 @@ public class Car {
         this.brand = brand;
         this.model = model;
         setColor(color);
-        if (year < 1886){
+        if (year < 1886) {
             throw new RuntimeException("");
         }
         this.year = year;
@@ -44,9 +44,26 @@ public class Car {
 
     public void setPrice(double price) {
 
-        if (price <= 0){
+        if (price <= 0) {
             throw new RuntimeException("Invalid price:" + price);
         }
         this.price = price;
+    }
+
+    public  void stop() {
+        System.out.println("Press the break");
+    }
+
+    public abstract void start();
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", color='" + color + '\'' +
+                ", year=" + year +
+                ", price=" + price +
+                '}';
     }
 }
