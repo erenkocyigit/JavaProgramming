@@ -1,57 +1,50 @@
 package day43_Abstraction.employee;
 
-public abstract class Employee {
+public abstract class Employee extends Person {
 
-    private String name;
-    private int age;
-    private char gender;
+    private final int id;
+    private String jobTitle;
+    private double salary;
 
-    public Employee(String name, int age, char gender) {
-        setName(name);
-        setAge(age);
-        setGender(gender);
 
+    public Employee(String name, int age, char gender, int id, String jobTitle, double salary) {
+        super(name, age, gender);
+        this.id = id;
+        this.jobTitle = jobTitle;
+        this.salary = salary;
     }
 
-    public String getName() {
-        return name;
+    public int getId() {
+        return id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getJobTitle() {
+        return jobTitle;
     }
 
-    public int getAge() {
-        return age;
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
     }
 
-    public void setAge(int age) {
-        if (age <= 0){
-            throw new RuntimeException("Invalid age: " + age);
-        }
-        this.age = age;
+    public double getSalary() {
+        return salary;
     }
 
-    public char getGender() {
-        return gender;
+    public void setSalary(double salary) {
+        this.salary = salary;
     }
 
-    public void setGender(char gender) {
-        this.gender = gender;
-    }
-
-    public abstract void sleep();
-
-    public void eat(){
-        System.out.println(name + " is eating baklava");
-    }
+    public abstract void work();
 
     @Override
     public String toString() {
         return "Employee{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", gender=" + gender +
+                "name='" + getName() + '\'' +
+                ", age=" + getAge() +
+                ", gender=" + getGender() +
+                ", id=" + id +
+                ", jobTitle='" + jobTitle + '\'' +
+                ", salary=" + salary +
                 '}';
     }
 }
