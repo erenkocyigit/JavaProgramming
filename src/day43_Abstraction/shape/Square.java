@@ -4,8 +4,9 @@ public class Square extends Shape {
 
     private double s;
 
-    protected Square(String name) {
+    public Square(String name, double s) {
         super(name);
+        setS(s);
     }
 
     public double getS() {
@@ -26,7 +27,13 @@ public class Square extends Shape {
         return 4*s;
     }
 
+    @Override
+    public String toString() {
+        return "Square{" +
+                "s=" + s +
+                "/ area= " + area() +
+                "/ perimeter= " + perimeter() +
 
-
-
+                '}';
+    }
 }
