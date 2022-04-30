@@ -8,5 +8,6 @@ public final class Eagle extends Animal {
     @Override
     public void eat() {
         System.out.println(getName() + " is eating snake" );
+
     }
 }
