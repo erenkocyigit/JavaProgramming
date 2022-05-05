@@ -5,10 +5,7 @@ import day37_Inheritance.animalTask.Animal;
 import day37_Inheritance.animalTask.Dog;
 import day39_Recap.cydeoTask.*;
 import day44_Abstraction.Playable;
-import day45_Abstraction.shape.Circle;
-import day45_Abstraction.shape.Rectangle;
-import day45_Abstraction.shape.Shape;
-import day45_Abstraction.shape.Square;
+import day45_Abstraction.shape.*;
 
 import java.util.ArrayList;
 
@@ -49,15 +46,18 @@ public class PolymorphismIntro {
 
         Animal animal3 = new Animal("max","Husky",'F',3,"Small");
 
-        Shape shape = new Circle(5);
+        Shape shape = new Rectangle("Rectangle");
         shape.area();
 
         boolean isSquare = shape instanceof Square;
         boolean isRectangle = shape instanceof Rectangle;
+        boolean isTriangle = shape instanceof Triangle;
+        boolean isCircle = shape instanceof Circle;
 
-
-
-
+        System.out.println("isTriangle = " + isTriangle);
+        System.out.println("isRectangle = " + isRectangle);
+        System.out.println("isSquare = " + isSquare);
+        System.out.println("isCircle = " + isCircle);
 
 
     }
