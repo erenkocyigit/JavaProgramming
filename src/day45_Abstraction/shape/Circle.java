@@ -6,7 +6,7 @@ public class Circle extends Shape {
 
     public final static double pi = 3.14;
 
-    public Circle(double radius) {
+    public Circle( double radius) {
         super("Circle");
         setRadius(radius);
     }
@@ -16,10 +16,9 @@ public class Circle extends Shape {
     }
 
     public void setRadius(double radius) {
-        if (radius < 0) {
-            throw new RuntimeException("Invalid Radius" + radius);
+        if(radius < 0){
+            throw new RuntimeException("Invalid Radius: "+radius);
         }
-
         this.radius = radius;
     }
 
@@ -34,12 +33,11 @@ public class Circle extends Shape {
         return 2 * radius * pi;
     }
 
-
     @Override
     public String toString() {
         return "Circle{" +
                 super.toString()+
-                "radius=" + radius +
+                ", radius=" + radius +
                 '}';
     }
 }
