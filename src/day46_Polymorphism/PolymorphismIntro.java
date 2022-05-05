@@ -32,6 +32,7 @@ public class PolymorphismIntro {
         cydeoEmployees.add(teacher);
 
         System.out.println("----------------------------");
+        System.out.println("----------------------------");
 
         Employee employee = new Teacher("Angel",28,'F',22,"English Teacher",85000 );
         employee.work();
