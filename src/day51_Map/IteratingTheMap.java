@@ -126,6 +126,8 @@ public class IteratingTheMap {
         for (Map.Entry<String, Integer> entry : students.entrySet()) {
             System.out.println(entry);
             System.out.println(entry.getKey() + " : " + entry.getValue());
+
+
         }
 
 
